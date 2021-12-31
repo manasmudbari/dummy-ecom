@@ -1,0 +1,52 @@
+.main {
+	width: 100%;
+	min-height: 920px;
+	padding-top: 44px;
+	display: flex;
+	justify-content: center;
+	.container {
+		width: 100%;
+		max-width: 1309px;
+		display: flex;
+		justify-content: space-between;
+		.detailesCard {
+			width: 60%;
+			max-width: 778px;
+			height: 100%;
+			max-height: 772px;
+			background: #f7fafc;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			padding: 37px 42px;
+			margin-right: 30px;
+			.progesStatus {
+				width: 534px;
+				height: 24px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				span {
+					font-style: normal;
+					font-weight: 500;
+					font-size: 20px;
+				}
+			}
+			.formWrapper {
+				width: 534px;
+				min-height: 500px;
+			}
+		}
+		.summaryCard {
+			width: 40%;
+			max-width: 513px;
+			height: 100%;
+			max-height: 772px;
+			background: #f7fafc;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			padding: 37px 46px;
+		}
+	}
+}
