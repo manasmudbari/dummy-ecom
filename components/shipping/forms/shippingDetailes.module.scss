@@ -1,0 +1,36 @@
+.formMain {
+	width: 100%;
+	padding-top: 50px;
+	h2 {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: #000000;
+	}
+	.addressAndcardtype {
+		width: 100%;
+		height: 59px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.typetext {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			color: #2d3748;
+		}
+	}
+	.postCodeAndshipingtype {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.postcode {
+			width: 212px;
+		}
+		.shippintype {
+			width: 278px;
+		}
+	}
+}

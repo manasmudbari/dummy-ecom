@@ -2,7 +2,7 @@ import { useState } from "react";
 import ShippingDetailsForm from "./forms/shippingDetailes";
 import styles from "./shipping.module.scss";
 const FormAndSummary = () => {
-	const [status, setStats] = useState("shipping");
+	const [status, setStatus] = useState("shipping");
 	return (
 		<div className={styles.main}>
 			<div className={styles.container}>
@@ -34,6 +34,28 @@ const FormAndSummary = () => {
 					</div>
 					<div className={styles.formWapper}>
 						<ShippingDetailsForm />
+					</div>
+					<div className={styles.line}></div>
+					<div className={styles.wapper}>
+						<div className={styles.buttons}>
+							<div className={styles.cancel}>Cancel order</div>
+							{status === "shipping" && (
+								<div
+									onClick={() => setStatus("payment")}
+									className={styles.button}
+								>
+									Payment
+								</div>
+							)}
+							{status === "payment" && (
+								<div
+									onClick={() => setStatus("shipping")}
+									className={styles.button}
+								>
+									Complete order
+								</div>
+							)}
+						</div>
 					</div>
 				</div>
 				<div className={styles.summaryCard}></div>

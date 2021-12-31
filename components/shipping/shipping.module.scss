@@ -17,7 +17,8 @@
 			background: #f7fafc;
 			border-radius: 10px;
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
+			align-items: center;
 			padding: 37px 42px;
 			margin-right: 30px;
 			.progesStatus {
@@ -32,9 +33,43 @@
 					font-size: 20px;
 				}
 			}
-			.formWrapper {
+			.formWapper {
 				width: 534px;
-				min-height: 500px;
+			}
+			.wapper {
+				width: 534px;
+				.buttons {
+					width: 100%;
+					padding-top: 39px;
+					height: 99px;
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					.cancel {
+						font-style: normal;
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 19px;
+						color: #4a5568;
+						margin-right: 50px;
+						cursor: pointer;
+					}
+					.button {
+						font-style: normal;
+						font-weight: 500;
+						font-size: 16px;
+						color: #f7fafc;
+						padding: 20px 66px;
+						background: #3182ce;
+						border-radius: 10px;
+						cursor: pointer;
+					}
+				}
+			}
+			.line {
+				width: 694px;
+				height: 35px;
+				border-bottom: 1px solid #e2e8f0;
 			}
 		}
 		.summaryCard {
