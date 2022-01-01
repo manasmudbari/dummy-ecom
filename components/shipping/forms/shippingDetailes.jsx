@@ -11,7 +11,7 @@ const ShippingDetailsForm = ({ status }) => {
 	const adrresses = ["123 , Electric avenue"];
 	return (
 		<form className={styles.formMain}>
-			<h2>Shipping details</h2>
+			<h2>Shipping Details</h2>
 			<div className={styles.addressAndcardtype}>
 				<span className={styles.typetext}>Use saved address</span>
 				<Dropdown data={adrresses} />
