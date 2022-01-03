@@ -20,10 +20,23 @@ const Input = ({ type, placeholder, required, onchange, value, done }) => {
 				required={required}
 				onChange={(e) => onchange(e.target.value)}
 			/>
-			{done && (
+
+			{done === false && done !== undefined && (
 				<img
 					src='circle-fill.svg'
 					style={{ position: "absolute", top: "32%", right: "17px" }}
+				/>
+			)}
+			{done === true && done !== undefined && (
+				<img
+					src='checkgreen.svg'
+					style={{
+						position: "absolute",
+						top: "35%",
+						right: "19px",
+						width: "20px",
+						height: "20px",
+					}}
 				/>
 			)}
 		</div>

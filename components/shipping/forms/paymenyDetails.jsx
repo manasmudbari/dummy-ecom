@@ -4,7 +4,7 @@ import Dropdown from "../../common/dropdown";
 import Input from "../../common/input";
 import styles from "./paymentdetails.module.scss";
 const PaymentDetailsForm = ({ status, checkcard }) => {
-	const [name, setName] = useState("123");
+	const [name, setName] = useState("");
 	const [cardNumber, setCardnumber] = useState();
 	const [called, setCalled] = useState(false);
 	const [mm, setMm] = useState();
@@ -41,7 +41,7 @@ const PaymentDetailsForm = ({ status, checkcard }) => {
 				onchange={setName}
 				required={true}
 				value={name}
-				done
+				done={name ? true : false}
 			/>
 			<CustomLabel text='Card number' />
 			<Input

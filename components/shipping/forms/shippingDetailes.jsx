@@ -4,9 +4,9 @@ import Dropdown from "../../common/dropdown";
 import Input from "../../common/input";
 import styles from "./shippingDetailes.module.scss";
 const ShippingDetailsForm = ({ status }) => {
-	const [frstliadress, setFirstline] = useState("123");
-	const [streetName, setStreetName] = useState("Electric avenue");
-	const [postCode, setPostCode] = useState("Electric avenue");
+	const [frstliadress, setFirstline] = useState("");
+	const [streetName, setStreetName] = useState("");
+	const [postCode, setPostCode] = useState("");
 	const shippingtypes = ["ABC - 123", "DSS - 167", "AJK- 765"];
 	const adrresses = ["123 , Electric avenue"];
 	return (
@@ -23,7 +23,7 @@ const ShippingDetailsForm = ({ status }) => {
 				onchange={setFirstline}
 				required={true}
 				value={frstliadress}
-				done
+				done={frstliadress ? true : false}
 			/>
 			<CustomLabel text='Street name' />
 			<Input
@@ -32,7 +32,7 @@ const ShippingDetailsForm = ({ status }) => {
 				onchange={setStreetName}
 				required={true}
 				value={streetName}
-				done
+				done={streetName ? true : false}
 			/>
 			<div className={styles.postCodeAndshipingtype}>
 				<div className={styles.postcode}>
