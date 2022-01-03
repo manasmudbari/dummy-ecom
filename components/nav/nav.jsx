@@ -12,8 +12,14 @@ const Nav = () => {
 						<span className={styles.item}>Help</span>
 					</div>
 					<div className={styles.right}>
-						<span className={styles.item}>Account &#9660;</span>
-						<span className={styles.item}>3 items</span>
+						<div className={styles.item}>
+							<span className={styles.item}>Account</span>
+							<img src='arrow-down.svg' alt='icon' />
+						</div>
+						<div className={styles.item}>
+							<img src='bag.svg' alt='icon' />
+							<span>3 items</span>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,15 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CustomLabel from "../../common/CustomLebel";
 import Dropdown from "../../common/dropdown";
 import Input from "../../common/input";
 import styles from "./paymentdetails.module.scss";
-const PaymentDetailsForm = ({ status }) => {
+const PaymentDetailsForm = ({ status, checkcard }) => {
 	const [name, setName] = useState("123");
 	const [cardNumber, setCardnumber] = useState();
+	const [called, setCalled] = useState(false);
 	const [mm, setMm] = useState();
 	const [yy, setYy] = useState();
 	const [cvc, setCvc] = useState();
+
 	const adrresses = ["123 , Electric avenue"];
+	useEffect(() => {
+		if (cardNumber !== undefined && called === false) {
+			if (cardNumber.length > 5 && cardNumber.length < 7) {
+				console.log("called");
+				checkcard(cardNumber);
+				setCalled(true);
+			}
+		} else if (cardNumber !== undefined && called === true) {
+			if (cardNumber.length < 6) {
+				console.log("called2");
+				setCalled(false);
+				checkcard(cardNumber);
+			}
+		}
+	}, [cardNumber]);
 	return (
 		<form className={styles.formMain}>
 			<h2>Payment Details</h2>
@@ -20,7 +37,7 @@ const PaymentDetailsForm = ({ status }) => {
 			<CustomLabel text='Name on card' />
 			<Input
 				type='text'
-				placeholder='Enter First line of address here'
+				placeholder='Enter Name here'
 				onchange={setName}
 				required={true}
 				value={name}
@@ -33,6 +50,7 @@ const PaymentDetailsForm = ({ status }) => {
 				onchange={setCardnumber}
 				required={true}
 				value={cardNumber}
+				pattern='[0-9.]+'
 			/>
 			<div className={styles.exprAndcvc}>
 				<div className={styles.expr}>
@@ -64,7 +82,12 @@ const PaymentDetailsForm = ({ status }) => {
 					</div>
 				</div>
 				<div className={styles.cvcWrapper}>
-					<CustomLabel text='CVC' />
+					<div className={styles.labelWrapper}>
+						<div className={styles.cvclabel}>
+							<CustomLabel text='CVC' />
+						</div>
+						<img src='help.svg' alt='icon' />
+					</div>
 					<input
 						className={styles.inputbb}
 						type='number'

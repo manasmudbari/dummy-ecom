@@ -69,6 +69,18 @@
 		}
 		.cvcWrapper {
 			width: 278px;
+			.labelWrapper {
+				width: 100%;
+				display: flex;
+
+				.cvclabel {
+					margin-right: 5px;
+				}
+				img {
+					cursor: pointer;
+				}
+			}
+
 			.inputbb {
 				width: 278px;
 				background: #e2e8f0;
