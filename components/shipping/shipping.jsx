@@ -257,7 +257,7 @@ const FormAndSummary = () => {
 								<p>
 									Click
 									<span>
-										<a target='_blank' href={card.offerlink}>
+										<a rel='noreferrer' target='_blank' href={card.offerlink}>
 											here
 										</a>
 									</span>
