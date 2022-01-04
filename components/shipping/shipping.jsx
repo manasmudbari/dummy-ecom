@@ -5,31 +5,141 @@ import PaymentDetailsForm from "./forms/paymenyDetails";
 import ShippingDetailsForm from "./forms/shippingDetailes";
 import styles from "./shipping.module.scss";
 const cards = {
-	601100: { cashback: "3%", imageLink: "discover.png" },
-	601110: { cashback: "3%", imageLink: "discover.png" },
-	651621: { cashback: "3%", imageLink: "discover.png" },
-	655066: { cashback: "3%", imageLink: "discover.png" },
-	659524: { cashback: "3%", imageLink: "discover.png" },
-	601120: { cashback: "3%", imageLink: "discover.png" },
-	601129: { cashback: "3%", imageLink: "discover.png" },
-	601130: { cashback: "3%", imageLink: "discover.png" },
-	601149: { cashback: "3%", imageLink: "discover.png" },
-	601138: { cashback: "3%", imageLink: "discover.png" },
-	517805: { cashback: "5%", imageLink: "capitalone.png" },
-	510805: { cashback: "5%", imageLink: "capitalone.png" },
-	512025: { cashback: "5%", imageLink: "capitalone.png" },
-	515597: { cashback: "5%", imageLink: "capitalone.png" },
-	515599: { cashback: "5%", imageLink: "capitalone.png" },
-	517305: { cashback: "5%", imageLink: "capitalone.png" },
-	520118: { cashback: "5%", imageLink: "capitalone.png" },
-	524149: { cashback: "5%", imageLink: "capitalone.png" },
-	526835: { cashback: "5%", imageLink: "capitalone.png" },
-	528942: { cashback: "5%", imageLink: "capitalone.png" },
-	540791: { cashback: "5%", imageLink: "capitalone.png" },
-	379733: { cashback: "8%", imageLink: "american.png" },
-	375987: { cashback: "8%", imageLink: "american.png" },
-	414720: { cashback: "10%", imageLink: "chase.png" },
-	418555: { cashback: "10%", imageLink: "chase.png" },
+	601100: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601110: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	651621: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	655066: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	659524: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601120: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601129: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601130: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601149: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	601138: {
+		cashback: "3%",
+		imageLink: "discover.png",
+		offerlink:
+			"https://www.discover.com/credit-cards/cashback-bonus/cashback-calendar.html",
+	},
+	517805: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	510805: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	512025: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	515597: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	515599: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	517305: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	520118: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	524149: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	526835: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	528942: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	540791: {
+		cashback: "5%",
+		imageLink: "capitalone.png",
+		offerlink: "https://www.capitalone.com/credit-cards/rewards/",
+	},
+	379733: {
+		cashback: "8%",
+		imageLink: "american.png",
+		offerlink: "https://global.americanexpress.com/rewards",
+	},
+	375987: {
+		cashback: "8%",
+		imageLink: "american.png",
+		offerlink: "https://global.americanexpress.com/rewards",
+	},
+	414720: {
+		cashback: "10%",
+		imageLink: "chase.png",
+		offerlink: "https://www.chase.com/personal/credit-cards/ultimate-rewards",
+	},
+	418555: {
+		cashback: "10%",
+		imageLink: "chase.png",
+		offerlink: "https://www.chase.com/personal/credit-cards/ultimate-rewards",
+	},
 };
 
 const FormAndSummary = () => {
@@ -145,7 +255,13 @@ const FormAndSummary = () => {
 									{`Earn ${card.cashback} cashback with this purchase`}
 								</div>
 								<p>
-									Click <span>here</span> to activate
+									Click
+									<span>
+										<a target='_blank' href={card.offerlink}>
+											here
+										</a>
+									</span>
+									to activate
 								</p>
 							</div>
 						</div>
