@@ -9,6 +9,94 @@
 		display: flex;
 		justify-content: center;
 		position: relative;
+		.popup {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.8);
+			z-index: 999999;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.form {
+				width: 320px;
+				height: 320px;
+				background-color: white;
+				border-radius: 10px;
+				padding: 0px 10px;
+				.close {
+					width: 100%;
+					display: flex;
+					justify-content: flex-end;
+
+					span {
+						font-size: 25px;
+						padding: 10px 5px;
+						cursor: pointer;
+					}
+				}
+				.wraper {
+					display: flex;
+					flex-direction: column;
+					label {
+						margin: 2px 0px;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 15px;
+						line-height: 29px;
+					}
+					input {
+						padding: 10px;
+						border: none;
+						background-color: #ddd;
+						border-radius: 5px;
+					}
+				}
+				.wrap {
+					margin-top: 10px;
+					display: flex;
+					align-items: center;
+					label {
+						margin: 2px 2px;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 29px;
+					}
+					input {
+						padding: 10px;
+						border: none;
+						background-color: #ddd;
+						border-radius: 5px;
+					}
+				}
+				.submit {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					margin-top: 15px;
+					.button {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 15px 30px;
+
+						background: #1ea7f3;
+						box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+						border-radius: 12px;
+						font-style: normal;
+						font-weight: bold;
+						font-size: 19px;
+						line-height: 19px;
+						letter-spacing: 0.2px;
+						color: #ffffff;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 		.background {
 			width: inherit;
 			height: 1000px;

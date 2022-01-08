@@ -1,8 +1,58 @@
+import { useState } from "react/cjs/react.development";
 import styles from "../../styles/welocome.module.scss";
 const Welcome = () => {
+	const [modal, setModal] = useState(false);
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const send = (e) => {
+		e.preventDefault();
+		fetch("/api/sendmail", {
+			method: "POST",
+			headers: { "Content-Type": "Application/json" },
+			body: JSON.stringify({
+				name: name,
+				email: email,
+			}),
+		})
+			.then((res) => res.json())
+			.then((d) => {
+				console.log(d);
+			});
+	};
+
 	return (
 		<div className={styles.blackBackground}>
 			<div className={styles.redBackGround}>
+				{modal && (
+					<div className={styles.popup}>
+						<form onSubmit={(e) => send(e)} className={styles.form}>
+							<div className={styles.close}>
+								<span onClick={() => setModal(false)}>x</span>
+							</div>
+							<div className={styles.wraper}>
+								<label>Full Name</label>
+								<input type='text' onChange={(e) => setName(e.target.value)} />
+							</div>
+							<div className={styles.wraper}>
+								<label>Company Email</label>
+								<input
+									type='email'
+									onChange={(e) => setEmail(e.target.value)}
+									required
+								/>
+							</div>
+							<div className={styles.wrap}>
+								<input type='checkbox' checked />
+								<label>Also subscribe me to your newsletter.</label>
+							</div>
+							<div className={styles.submit}>
+								<button type='submit' className={styles.button}>
+									Request
+								</button>
+							</div>
+						</form>
+					</div>
+				)}
 				<img
 					className={styles.background}
 					src='Background.png'
@@ -23,7 +73,9 @@ const Welcome = () => {
 						checkout.
 					</p>
 					<div>
-						<div className={styles.actionButton}>Request a Demo</div>
+						<div onClick={() => setModal(true)} className={styles.actionButton}>
+							Request a Demo
+						</div>
 					</div>
 					<img className={styles.laptop} src='Screen.png' alt='webpage view' />
 					<h1 className={styles.feature}>FEATURES</h1>
