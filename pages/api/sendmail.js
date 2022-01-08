@@ -14,7 +14,7 @@ export default function handler(req, res) {
 	});
 
 	try {
-		client.send({
+		client.sendAsync({
 			text: `name: ${name} , email: ${email}`,
 			from: "lakhe.signups@gmail.com",
 			to: "lakhe.signups@gmail.com",
