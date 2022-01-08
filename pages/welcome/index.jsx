@@ -14,6 +14,9 @@ const Welcome = () => {
 					alt='backgound red curve'
 				/>
 				<div className={styles.container}>
+					<div className={styles.logo}>
+						<span>LAKHE</span>{" "}
+					</div>
 					<h1 className={styles.heading}>Offer Cashback at Checkout</h1>
 					<p className={styles.description}>
 						Engage consumers through credit card cashback rewards activation at
@@ -67,18 +70,14 @@ const Welcome = () => {
 							<h1>Subscribe to our newsletter</h1>
 						</div>
 
-						<div className={styles.inputs}>
-							<input
-								type='text'
-								placeholder='Enter Your Adress Email                              '
-							/>
-							<div className={styles.button}>Submit</div>
-						</div>
-						<div className={styles.socials}>
-							<img src='twiteer.svg' alt='social icon' />
-							<img src='fb.svg' alt='social icon' />
-							<img src='linkedin.svg' alt='social icon' />
-						</div>
+						<iframe
+							className={styles.iframe}
+							src='https://manasmudbari.substack.com/embed'
+							height='320'
+							style={{ border: "1px solid #EEE", background: "white" }}
+							frameborder='0'
+							scrolling='no'
+						></iframe>
 					</div>
 				</div>
 			</div>

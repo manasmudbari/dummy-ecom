@@ -1,6 +1,7 @@
 .blackBackground {
+	font-family: Inter !important;
 	width: 100%;
-	height: 3450px;
+	height: 2990px;
 	background-color: rgba(19, 23, 32, 1);
 	.redBackGround {
 		width: 100%;
@@ -10,7 +11,7 @@
 		position: relative;
 		.background {
 			width: inherit;
-			height: 1204px;
+			height: 1000px;
 			display: block;
 			position: absolute;
 			top: 0;
@@ -29,8 +30,26 @@
 			flex-direction: column;
 			align-items: center;
 			z-index: 999;
+			.logo {
+				width: 100%;
+				display: flex;
+				margin-top: 50px;
+				justify-content: flex-start;
+
+				span {
+					padding: 20px 40px;
+					font-family: Avenir;
+					font-style: italic;
+					font-size: 40px;
+					color: red;
+					font-weight: bold;
+					background-color: white;
+					border-radius: 5px;
+					box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+				}
+			}
 			.heading {
-				margin-top: 250px;
+				margin-top: 62px;
 				margin-bottom: 27px;
 				font-family: Inter;
 				font-style: normal;
@@ -44,7 +63,7 @@
 			}
 			.description {
 				margin: 0px;
-				margin-bottom: 95px;
+				margin-bottom: 34px;
 				font-style: normal;
 				font-weight: 600;
 				font-size: 25px;
@@ -76,7 +95,7 @@
 				width: 100%;
 			}
 			.feature {
-				margin-top: 282px;
+				margin-top: 80px;
 				font-style: normal;
 				font-weight: bold;
 				font-size: 44px;
@@ -150,8 +169,8 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				margin-top: 355px;
-				margin-bottom: 111px;
+				margin-top: 100px;
+
 				.title {
 					width: 440px;
 					h1 {
@@ -164,54 +183,8 @@
 						margin-bottom: 36px;
 					}
 				}
-
-				.inputs {
-					display: flex;
-					input {
-						width: 284px;
-						height: 52px;
-						background: #efefef;
-						border: 1px solid #d0d0d0;
-						box-sizing: border-box;
-						border-radius: 6px;
-						margin: 0px 10px;
-						padding: 14px 28px;
-						font-style: normal;
-						font-weight: bold;
-						font-size: 15px;
-						line-height: 24px;
-
-						letter-spacing: 0.2px;
-
-						color: #afafaf;
-					}
-					.button {
-						width: 160px;
-						height: 52px;
-						background: #fc4746;
-						box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
-						border-radius: 12px;
-						font-family: Inter;
-						font-style: normal;
-						font-weight: bold;
-						font-size: 19px;
-						line-height: 19px;
-						/* identical to box height, or 100% */
-
-						letter-spacing: 0.2px;
-
-						color: #ffffff;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						cursor: pointer;
-					}
-				}
-				.socials {
-					width: 464px;
-					img {
-						margin: 20px 10px;
-					}
+				.iframe {
+					width: 450px;
 				}
 			}
 		}
@@ -219,7 +192,7 @@
 }
 @media (max-width: 600px) {
 	.blackBackground {
-		height: 2800px;
+		height: 2510px;
 		.redBackGround {
 			.background {
 				display: none;
@@ -230,18 +203,24 @@
 				position: absolute;
 				top: 0;
 				z-index: 99;
-				height: 914px;
+				height: 768px;
 			}
 			.container {
 				width: 85%;
 				max-width: 428px;
+				.logo {
+					justify-content: center;
+					span {
+						font-size: 25px;
+					}
+				}
 				.heading {
 					width: 100%;
 					max-width: 393px;
 					font-size: 44px;
 					line-height: 58px;
 					/* or 132% */
-					margin-top: 166px;
+					margin-top: 31px;
 					text-align: center;
 					letter-spacing: 0.2px;
 				}
@@ -255,39 +234,30 @@
 				.actionButton {
 					width: 314px;
 					height: 70px;
-					margin-top: 68px;
-					margin-bottom: 127px;
+					margin-top: 32px;
+					margin-bottom: 38px;
 				}
 				.feature {
-					margin-top: 132px;
+					margin-top: 60px;
 				}
 				.features {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-
+					margin-top: 20px;
 					.snipet {
 						margin-right: 0px;
 						margin-bottom: 56px;
 					}
 				}
 				.footer {
-					margin-top: 117px;
+					margin-top: 38px;
+					margin-bottom: 0px;
 					.title {
 						width: 284px;
 					}
-					.inputs {
-						flex-direction: column;
-						align-items: center;
-						input {
-							width: 284px;
-							margin-bottom: 10px;
-						}
-					}
-					.socials {
-						width: 284px;
-						display: flex;
-						justify-content: center;
+					.iframe {
+						width: 100%;
 					}
 				}
 			}
