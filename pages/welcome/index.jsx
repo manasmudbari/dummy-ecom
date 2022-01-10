@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import styles from "../../styles/welocome.module.scss";
 const Welcome = () => {
 	const [modal, setModal] = useState(false);
