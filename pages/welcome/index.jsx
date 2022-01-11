@@ -1,19 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../styles/welocome.module.scss";
 const Welcome = () => {
 	const [modal, setModal] = useState(false);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+	const [sub, setSub] = useState(true);
+	const ss = sub ? "yes" : "no";
 	const send = (e) => {
 		e.preventDefault();
-		fetch("/api/sendmail", {
-			method: "POST",
-			headers: { "Content-Type": "Application/json" },
-			body: JSON.stringify({
-				name: name,
-				email: email,
-			}),
-		})
+		fetch(
+			"https://sheet.best/api/sheets/55a61fcf-339e-41c3-a4a6-31e2ae8401c9",
+			{
+				method: "POST",
+				headers: { "Content-Type": "Application/json" },
+				body: JSON.stringify({
+					Full_Name: name,
+					Company_Email: email,
+					Subscribed: ss,
+				}),
+			}
+		)
 			.then((res) => res.json())
 			.then((d) => {
 				console.log(d);
@@ -31,7 +37,11 @@ const Welcome = () => {
 							</div>
 							<div className={styles.wraper}>
 								<label>Full Name</label>
-								<input type='text' onChange={(e) => setName(e.target.value)} />
+								<input
+									type='text'
+									onChange={(e) => setName(e.target.value)}
+									required
+								/>
 							</div>
 							<div className={styles.wraper}>
 								<label>Company Email</label>
@@ -42,7 +52,11 @@ const Welcome = () => {
 								/>
 							</div>
 							<div className={styles.wrap}>
-								<input type='checkbox' checked />
+								<input
+									type='checkbox'
+									onChange={(e) => setSub(e.target.checked)}
+									checked={sub}
+								/>
 								<label>Also subscribe me to your newsletter.</label>
 							</div>
 							<div className={styles.submit}>
@@ -124,7 +138,7 @@ const Welcome = () => {
 
 						<iframe
 							className={styles.iframe}
-							src='https://manasmudbari.substack.com/embed'
+							src='https://lakhe.substack.com/embed'
 							height='320'
 							style={{ border: "1px solid #EEE", background: "white" }}
 							frameBorder='0'
@@ -133,6 +147,7 @@ const Welcome = () => {
 					</div>
 				</div>
 			</div>
+			<p className={styles.copyr}>© 2022 Lakhe. All Rights Reserved.</p>
 		</div>
 	);
 };
