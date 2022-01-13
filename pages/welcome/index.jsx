@@ -112,7 +112,7 @@ const Welcome = () => {
 										curl -X POST https://sandbox.rewardsapp.com/transactions/get
 										\
 									</div>
-									<div>-H 'Content-Type: application/json' \</div>
+									<div>-H &#39;Content-Type: application/json&#39; \</div>
 									<div> -d &#39;&#10100;</div>
 									<div className={styles.props}>
 										&#34;merchant_id&#34;: &#34;Dummy_Commerce&#34;,
