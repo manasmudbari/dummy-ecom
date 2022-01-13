@@ -209,6 +209,11 @@
 				display: flex;
 				justify-content: space-between;
 				margin-top: 74px;
+				pre {
+					white-space: pre-wrap;
+					word-wrap: break-word;
+					word-break: break-all;
+				}
 				.snipet {
 					width: 70%;
 					max-width: 752px;

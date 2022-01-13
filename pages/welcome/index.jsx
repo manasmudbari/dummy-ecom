@@ -98,12 +98,18 @@ const Welcome = () => {
 						and credit card issuers.
 					</p>
 					<div className={styles.features}>
-						<img className={styles.snipet} src='codesnipet.png' alt='snipet' />
+						<div>
+							curl -X POST https://sandbox.rewardsapp.com/transactions/get \ -H
+							'Content-Type: application/json' \ -d '&#10101; "merchant_id":
+							"Dummy_Commerce", "credit_card": "3759 876543 21001",
+							"access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3" &#10101;'
+						</div>
+
 						<div className={styles.points}>
 							<div className={styles.point}>
 								<div className={styles.top}>
 									<img src='redcart.svg' alt='icon' />
-									<h2>Prevent Cart Abandonment</h2>
+									<h2>Prevent Cart Abandonment </h2>
 								</div>
 								<p className={styles.bottom}>
 									Help your customer offset total cost through cashback rewards
