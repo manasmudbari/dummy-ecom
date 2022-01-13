@@ -115,13 +115,14 @@ const Welcome = () => {
 									<div>-H 'Content-Type: application/json' \</div>
 									<div> -d &#39;&#10100;</div>
 									<div className={styles.props}>
-										"merchant_id": "Dummy_Commerce",
+										&#34;merchant_id&#34;: &#34;Dummy_Commerce&#34;,
 									</div>
 									<div className={styles.props}>
-										"credit_card": "3759 876543 21001",
+										&#34;credit_card&#34;: &#34;3759 876543 21001&#34;,
 									</div>
 									<div className={styles.props}>
-										"access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3"
+										&#34;access_token&#34;:
+										&#34;MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3&#34;
 									</div>
 									<div className={styles.rightbracs}>&#10101;&#39;</div>
 									<div
