@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../../styles/welocome.module.scss";
 const Welcome = () => {
 	const [modal, setModal] = useState(false);
@@ -113,7 +113,7 @@ const Welcome = () => {
 										\
 									</div>
 									<div>-H 'Content-Type: application/json' \</div>
-									<div> -d '&#10100;</div>
+									<div> -d &#39;&#10100;</div>
 									<div className={styles.props}>
 										"merchant_id": "Dummy_Commerce",
 									</div>
@@ -123,7 +123,7 @@ const Welcome = () => {
 									<div className={styles.props}>
 										"access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3"
 									</div>
-									<div className={styles.rightbracs}>&#10101;'</div>
+									<div className={styles.rightbracs}>&#10101;&#39;</div>
 									<div
 										onClick={() => setResponse(true)}
 										className={styles.button}
