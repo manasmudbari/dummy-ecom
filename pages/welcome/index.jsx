@@ -4,8 +4,15 @@ const Welcome = () => {
 	const [modal, setModal] = useState(false);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+	const [response, setResponse] = useState(false);
 	const [sub, setSub] = useState(true);
 	const ss = sub ? "yes" : "no";
+	const jsons = {
+		cashback_type: "percentage",
+		cashback: 12.5,
+		expiry_date: "03/25/2022",
+		activation_url: "https://sandbox.rewardsapp.com/amex/rewards-activation/",
+	};
 	const send = (e) => {
 		e.preventDefault();
 		fetch(
@@ -98,11 +105,35 @@ const Welcome = () => {
 						and credit card issuers.
 					</p>
 					<div className={styles.features}>
-						<div>
-							curl -X POST https://sandbox.rewardsapp.com/transactions/get \ -H
-							'Content-Type: application/json' \ -d '&#10101; "merchant_id":
-							"Dummy_Commerce", "credit_card": "3759 876543 21001",
-							"access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3" &#10101;'
+						<div className={styles.code}>
+							{!response ? (
+								<>
+									<div>
+										curl -X POST https://sandbox.rewardsapp.com/transactions/get
+										\
+									</div>
+									<div>-H 'Content-Type: application/json' \</div>
+									<div> -d '&#10100;</div>
+									<div className={styles.props}>
+										"merchant_id": "Dummy_Commerce",
+									</div>
+									<div className={styles.props}>
+										"credit_card": "3759 876543 21001",
+									</div>
+									<div className={styles.props}>
+										"access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3"
+									</div>
+									<div className={styles.rightbracs}>&#10101;'</div>
+									<div
+										onClick={() => setResponse(true)}
+										className={styles.button}
+									>
+										RUN
+									</div>
+								</>
+							) : (
+								<pre>{JSON.stringify(jsons, null, 2)}</pre>
+							)}
 						</div>
 
 						<div className={styles.points}>
